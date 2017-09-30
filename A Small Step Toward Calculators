@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    static int solve(String opr) {
+        int res=0;
+         char ch[]=opr.toCharArray();
+       int a=(int)(ch[0])-48; 
+        int b=(int)(ch[2])-48; 
+    if(opr.contains("+")){
+    res=a+b;
+    }
+    if(opr.contains("-")){ 
+    res=a-b;
+    }
+    return res;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String opr = in.next();
+        int result = solve(opr);
+        System.out.println(result);
+        in.close();
+    }
+}
